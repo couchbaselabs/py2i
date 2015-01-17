@@ -11,7 +11,7 @@ ap.add_argument('-n', '--name', help="Index Name", default=None)
 ap.add_argument('-D', '--definition', help="Definition of a new index")
 ap.add_argument('-B', '--bucket', help="Bucket for index", default="default")
 ap.add_argument('-f', '--force', help="Force creation (Delete first)", default=True, action='store_true')
-ap.add_argument('-T', '--type', help="Index type", choices=('lsm', 'ForestDB'), default='ForestDB')
+ap.add_argument('-T', '--type', help="Index type", choices=('lsm', 'ForestDB', 'gsi'), default='ForestDB')
 
 options = ap.parse_args()
 
