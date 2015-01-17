@@ -11,7 +11,7 @@ from google.protobuf import descriptor_pb2
 DESCRIPTOR = descriptor.FileDescriptor(
   name='query.proto',
   package='q2i',
-  serialized_pb='\n\x0bquery.proto\x12\x03q2i\"\x16\n\x05\x45rror\x12\r\n\x05\x65rror\x18\x01 \x02(\t\"\xcd\x02\n\x0cQueryPayload\x12\x0f\n\x07version\x18\x01 \x02(\r\x12\x31\n\x11statisticsRequest\x18\x02 \x01(\x0b\x32\x16.q2i.StatisticsRequest\x12%\n\x0bscanRequest\x18\x03 \x01(\x0b\x32\x10.q2i.ScanRequest\x12+\n\x0escanAllRequest\x18\x04 \x01(\x0b\x32\x13.q2i.ScanAllRequest\x12(\n\tendStream\x18\x05 \x01(\x0b\x32\x15.q2i.EndStreamRequest\x12+\n\nstatistics\x18\x06 \x01(\x0b\x32\x17.q2i.StatisticsResponse\x12#\n\x06stream\x18\x07 \x01(\x0b\x32\x13.q2i.ResponseStream\x12)\n\tstreamEnd\x18\x08 \x01(\x0b\x32\x16.q2i.StreamEndResponse\"O\n\x11StatisticsRequest\x12\x17\n\x04span\x18\x01 \x02(\x0b\x32\t.q2i.Span\x12\x11\n\tindexName\x18\x03 \x02(\t\x12\x0e\n\x06\x62ucket\x18\x04 \x02(\t\"R\n\x12StatisticsResponse\x12#\n\x05stats\x18\x01 \x02(\x0b\x32\x14.q2i.IndexStatistics\x12\x17\n\x03\x65rr\x18\x02 \x01(\x0b\x32\n.q2i.Error\"|\n\x0bScanRequest\x12\x17\n\x04span\x18\x01 \x02(\x0b\x32\t.q2i.Span\x12\x10\n\x08\x64istinct\x18\x02 \x02(\x08\x12\r\n\x05limit\x18\x03 \x02(\x03\x12\x10\n\x08pageSize\x18\x04 \x02(\x03\x12\x11\n\tindexName\x18\x05 \x02(\t\x12\x0e\n\x06\x62ucket\x18\x06 \x02(\t\"T\n\x0eScanAllRequest\x12\x10\n\x08pageSize\x18\x01 \x02(\x03\x12\r\n\x05limit\x18\x02 \x02(\x03\x12\x11\n\tindexName\x18\x03 \x02(\t\x12\x0e\n\x06\x62ucket\x18\x04 \x02(\t\"\x12\n\x10\x45ndStreamRequest\"P\n\x0eResponseStream\x12%\n\x0cindexEntries\x18\x01 \x03(\x0b\x32\x0f.q2i.IndexEntry\x12\x17\n\x03\x65rr\x18\x02 \x01(\x0b\x32\n.q2i.Error\",\n\x11StreamEndResponse\x12\x17\n\x03\x65rr\x18\x01 \x01(\x0b\x32\n.q2i.Error\"0\n\x04Span\x12\x19\n\x05range\x18\x01 \x02(\x0b\x32\n.q2i.Range\x12\r\n\x05\x65qual\x18\x02 \x03(\x0c\"5\n\x05Range\x12\x0b\n\x03low\x18\x01 \x02(\x0c\x12\x0c\n\x04high\x18\x02 \x02(\x0c\x12\x11\n\tinclusion\x18\x03 \x02(\r\"2\n\nIndexEntry\x12\x10\n\x08\x65ntryKey\x18\x01 \x02(\x0c\x12\x12\n\nprimaryKey\x18\x02 \x02(\x0c\"]\n\x0fIndexStatistics\x12\x11\n\tkeysCount\x18\x01 \x02(\x04\x12\x17\n\x0funiqueKeysCount\x18\x02 \x02(\x04\x12\x0e\n\x06keyMin\x18\x03 \x02(\x0c\x12\x0e\n\x06keyMax\x18\x04 \x02(\x0c')
+  serialized_pb='\n\x0bquery.proto\x12\x03q2i\"\x16\n\x05\x45rror\x12\r\n\x05\x65rror\x18\x01 \x02(\t\"\xa1\x03\n\x0cQueryPayload\x12\x0f\n\x07version\x18\x01 \x02(\r\x12\x31\n\x11statisticsRequest\x18\x02 \x01(\x0b\x32\x16.q2i.StatisticsRequest\x12+\n\nstatistics\x18\x03 \x01(\x0b\x32\x17.q2i.StatisticsResponse\x12%\n\x0bscanRequest\x18\x04 \x01(\x0b\x32\x10.q2i.ScanRequest\x12+\n\x0escanAllRequest\x18\x05 \x01(\x0b\x32\x13.q2i.ScanAllRequest\x12#\n\x06stream\x18\x06 \x01(\x0b\x32\x13.q2i.ResponseStream\x12\'\n\x0c\x63ountRequest\x18\x07 \x01(\x0b\x32\x11.q2i.CountRequest\x12)\n\rcountResponse\x18\x08 \x01(\x0b\x32\x12.q2i.CountResponse\x12(\n\tendStream\x18\t \x01(\x0b\x32\x15.q2i.EndStreamRequest\x12)\n\tstreamEnd\x18\n \x01(\x0b\x32\x16.q2i.StreamEndResponse\"O\n\x11StatisticsRequest\x12\x17\n\x04span\x18\x01 \x02(\x0b\x32\t.q2i.Span\x12\x11\n\tindexName\x18\x03 \x02(\t\x12\x0e\n\x06\x62ucket\x18\x04 \x02(\t\"R\n\x12StatisticsResponse\x12#\n\x05stats\x18\x01 \x02(\x0b\x32\x14.q2i.IndexStatistics\x12\x17\n\x03\x65rr\x18\x02 \x01(\x0b\x32\n.q2i.Error\"|\n\x0bScanRequest\x12\x17\n\x04span\x18\x01 \x02(\x0b\x32\t.q2i.Span\x12\x10\n\x08\x64istinct\x18\x02 \x02(\x08\x12\r\n\x05limit\x18\x03 \x02(\x03\x12\x10\n\x08pageSize\x18\x04 \x02(\x03\x12\x11\n\tindexName\x18\x05 \x02(\t\x12\x0e\n\x06\x62ucket\x18\x06 \x02(\t\"T\n\x0eScanAllRequest\x12\x10\n\x08pageSize\x18\x01 \x02(\x03\x12\r\n\x05limit\x18\x02 \x02(\x03\x12\x11\n\tindexName\x18\x03 \x02(\t\x12\x0e\n\x06\x62ucket\x18\x04 \x02(\t\"\x12\n\x10\x45ndStreamRequest\"P\n\x0eResponseStream\x12%\n\x0cindexEntries\x18\x01 \x03(\x0b\x32\x0f.q2i.IndexEntry\x12\x17\n\x03\x65rr\x18\x02 \x01(\x0b\x32\n.q2i.Error\",\n\x11StreamEndResponse\x12\x17\n\x03\x65rr\x18\x01 \x01(\x0b\x32\n.q2i.Error\"1\n\x0c\x43ountRequest\x12\x11\n\tindexName\x18\x01 \x02(\t\x12\x0e\n\x06\x62ucket\x18\x02 \x02(\t\"7\n\rCountResponse\x12\r\n\x05\x63ount\x18\x01 \x02(\x03\x12\x17\n\x03\x65rr\x18\x02 \x01(\x0b\x32\n.q2i.Error\"0\n\x04Span\x12\x19\n\x05range\x18\x01 \x01(\x0b\x32\n.q2i.Range\x12\r\n\x05\x65qual\x18\x02 \x03(\x0c\"5\n\x05Range\x12\x0b\n\x03low\x18\x01 \x02(\x0c\x12\x0c\n\x04high\x18\x02 \x02(\x0c\x12\x11\n\tinclusion\x18\x03 \x02(\r\"2\n\nIndexEntry\x12\x10\n\x08\x65ntryKey\x18\x01 \x02(\x0c\x12\x12\n\nprimaryKey\x18\x02 \x02(\x0c\"]\n\x0fIndexStatistics\x12\x11\n\tkeysCount\x18\x01 \x02(\x04\x12\x17\n\x0funiqueKeysCount\x18\x02 \x02(\x04\x12\x0e\n\x06keyMin\x18\x03 \x02(\x0c\x12\x0e\n\x06keyMax\x18\x04 \x02(\x0c')
 
 
 
@@ -66,43 +66,57 @@ _QUERYPAYLOAD = descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='scanRequest', full_name='q2i.QueryPayload.scanRequest', index=2,
+      name='statistics', full_name='q2i.QueryPayload.statistics', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='scanAllRequest', full_name='q2i.QueryPayload.scanAllRequest', index=3,
+      name='scanRequest', full_name='q2i.QueryPayload.scanRequest', index=3,
       number=4, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='endStream', full_name='q2i.QueryPayload.endStream', index=4,
+      name='scanAllRequest', full_name='q2i.QueryPayload.scanAllRequest', index=4,
       number=5, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='statistics', full_name='q2i.QueryPayload.statistics', index=5,
+      name='stream', full_name='q2i.QueryPayload.stream', index=5,
       number=6, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='stream', full_name='q2i.QueryPayload.stream', index=6,
+      name='countRequest', full_name='q2i.QueryPayload.countRequest', index=6,
       number=7, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='streamEnd', full_name='q2i.QueryPayload.streamEnd', index=7,
+      name='countResponse', full_name='q2i.QueryPayload.countResponse', index=7,
       number=8, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='endStream', full_name='q2i.QueryPayload.endStream', index=8,
+      number=9, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='streamEnd', full_name='q2i.QueryPayload.streamEnd', index=9,
+      number=10, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -117,7 +131,7 @@ _QUERYPAYLOAD = descriptor.Descriptor(
   is_extendable=False,
   extension_ranges=[],
   serialized_start=45,
-  serialized_end=378,
+  serialized_end=462,
 )
 
 
@@ -158,8 +172,8 @@ _STATISTICSREQUEST = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=380,
-  serialized_end=459,
+  serialized_start=464,
+  serialized_end=543,
 )
 
 
@@ -193,8 +207,8 @@ _STATISTICSRESPONSE = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=461,
-  serialized_end=543,
+  serialized_start=545,
+  serialized_end=627,
 )
 
 
@@ -256,8 +270,8 @@ _SCANREQUEST = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=545,
-  serialized_end=669,
+  serialized_start=629,
+  serialized_end=753,
 )
 
 
@@ -305,8 +319,8 @@ _SCANALLREQUEST = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=671,
-  serialized_end=755,
+  serialized_start=755,
+  serialized_end=839,
 )
 
 
@@ -326,8 +340,8 @@ _ENDSTREAMREQUEST = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=757,
-  serialized_end=775,
+  serialized_start=841,
+  serialized_end=859,
 )
 
 
@@ -361,8 +375,8 @@ _RESPONSESTREAM = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=777,
-  serialized_end=857,
+  serialized_start=861,
+  serialized_end=941,
 )
 
 
@@ -389,8 +403,78 @@ _STREAMENDRESPONSE = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=859,
-  serialized_end=903,
+  serialized_start=943,
+  serialized_end=987,
+)
+
+
+_COUNTREQUEST = descriptor.Descriptor(
+  name='CountRequest',
+  full_name='q2i.CountRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    descriptor.FieldDescriptor(
+      name='indexName', full_name='q2i.CountRequest.indexName', index=0,
+      number=1, type=9, cpp_type=9, label=2,
+      has_default_value=False, default_value=unicode("", "utf-8"),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='bucket', full_name='q2i.CountRequest.bucket', index=1,
+      number=2, type=9, cpp_type=9, label=2,
+      has_default_value=False, default_value=unicode("", "utf-8"),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=989,
+  serialized_end=1038,
+)
+
+
+_COUNTRESPONSE = descriptor.Descriptor(
+  name='CountResponse',
+  full_name='q2i.CountResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    descriptor.FieldDescriptor(
+      name='count', full_name='q2i.CountResponse.count', index=0,
+      number=1, type=3, cpp_type=2, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='err', full_name='q2i.CountResponse.err', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=1040,
+  serialized_end=1095,
 )
 
 
@@ -403,7 +487,7 @@ _SPAN = descriptor.Descriptor(
   fields=[
     descriptor.FieldDescriptor(
       name='range', full_name='q2i.Span.range', index=0,
-      number=1, type=11, cpp_type=10, label=2,
+      number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -424,8 +508,8 @@ _SPAN = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=905,
-  serialized_end=953,
+  serialized_start=1097,
+  serialized_end=1145,
 )
 
 
@@ -466,8 +550,8 @@ _RANGE = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=955,
-  serialized_end=1008,
+  serialized_start=1147,
+  serialized_end=1200,
 )
 
 
@@ -501,8 +585,8 @@ _INDEXENTRY = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=1010,
-  serialized_end=1060,
+  serialized_start=1202,
+  serialized_end=1252,
 )
 
 
@@ -550,16 +634,18 @@ _INDEXSTATISTICS = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=1062,
-  serialized_end=1155,
+  serialized_start=1254,
+  serialized_end=1347,
 )
 
 _QUERYPAYLOAD.fields_by_name['statisticsRequest'].message_type = _STATISTICSREQUEST
+_QUERYPAYLOAD.fields_by_name['statistics'].message_type = _STATISTICSRESPONSE
 _QUERYPAYLOAD.fields_by_name['scanRequest'].message_type = _SCANREQUEST
 _QUERYPAYLOAD.fields_by_name['scanAllRequest'].message_type = _SCANALLREQUEST
-_QUERYPAYLOAD.fields_by_name['endStream'].message_type = _ENDSTREAMREQUEST
-_QUERYPAYLOAD.fields_by_name['statistics'].message_type = _STATISTICSRESPONSE
 _QUERYPAYLOAD.fields_by_name['stream'].message_type = _RESPONSESTREAM
+_QUERYPAYLOAD.fields_by_name['countRequest'].message_type = _COUNTREQUEST
+_QUERYPAYLOAD.fields_by_name['countResponse'].message_type = _COUNTRESPONSE
+_QUERYPAYLOAD.fields_by_name['endStream'].message_type = _ENDSTREAMREQUEST
 _QUERYPAYLOAD.fields_by_name['streamEnd'].message_type = _STREAMENDRESPONSE
 _STATISTICSREQUEST.fields_by_name['span'].message_type = _SPAN
 _STATISTICSRESPONSE.fields_by_name['stats'].message_type = _INDEXSTATISTICS
@@ -568,6 +654,7 @@ _SCANREQUEST.fields_by_name['span'].message_type = _SPAN
 _RESPONSESTREAM.fields_by_name['indexEntries'].message_type = _INDEXENTRY
 _RESPONSESTREAM.fields_by_name['err'].message_type = _ERROR
 _STREAMENDRESPONSE.fields_by_name['err'].message_type = _ERROR
+_COUNTRESPONSE.fields_by_name['err'].message_type = _ERROR
 _SPAN.fields_by_name['range'].message_type = _RANGE
 DESCRIPTOR.message_types_by_name['Error'] = _ERROR
 DESCRIPTOR.message_types_by_name['QueryPayload'] = _QUERYPAYLOAD
@@ -578,6 +665,8 @@ DESCRIPTOR.message_types_by_name['ScanAllRequest'] = _SCANALLREQUEST
 DESCRIPTOR.message_types_by_name['EndStreamRequest'] = _ENDSTREAMREQUEST
 DESCRIPTOR.message_types_by_name['ResponseStream'] = _RESPONSESTREAM
 DESCRIPTOR.message_types_by_name['StreamEndResponse'] = _STREAMENDRESPONSE
+DESCRIPTOR.message_types_by_name['CountRequest'] = _COUNTREQUEST
+DESCRIPTOR.message_types_by_name['CountResponse'] = _COUNTRESPONSE
 DESCRIPTOR.message_types_by_name['Span'] = _SPAN
 DESCRIPTOR.message_types_by_name['Range'] = _RANGE
 DESCRIPTOR.message_types_by_name['IndexEntry'] = _INDEXENTRY
@@ -636,6 +725,18 @@ class StreamEndResponse(message.Message):
   DESCRIPTOR = _STREAMENDRESPONSE
   
   # @@protoc_insertion_point(class_scope:q2i.StreamEndResponse)
+
+class CountRequest(message.Message):
+  __metaclass__ = reflection.GeneratedProtocolMessageType
+  DESCRIPTOR = _COUNTREQUEST
+  
+  # @@protoc_insertion_point(class_scope:q2i.CountRequest)
+
+class CountResponse(message.Message):
+  __metaclass__ = reflection.GeneratedProtocolMessageType
+  DESCRIPTOR = _COUNTRESPONSE
+  
+  # @@protoc_insertion_point(class_scope:q2i.CountResponse)
 
 class Span(message.Message):
   __metaclass__ = reflection.GeneratedProtocolMessageType
