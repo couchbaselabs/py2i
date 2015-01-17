@@ -53,7 +53,11 @@ class QueryHandler(object):
         buf = bytearray()
         while True:
             while len(buf) < 6:
+                oldlen = len(buf)
                 buf += self._sock.recv(4096)
+                newlen = len(buf)
+                if oldlen == newlen:
+                    raise Exception('Connection closed!')
 
             rlen, rflags = struct.unpack("!IH", bytes(buf[:6]))
             if rflags != FL_PROTOBUF:
